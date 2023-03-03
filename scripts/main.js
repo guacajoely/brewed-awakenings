@@ -1,6 +1,6 @@
 import { Employees } from "./Employees.js"
-import { Orders } from "./Order.js"
 import { Products } from "./Products.js"
+import { Orders } from "./Orders.js"
 
 const mainContainer = document.querySelector("#container")
 
