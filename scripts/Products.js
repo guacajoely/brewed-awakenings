@@ -16,3 +16,26 @@ export const Products = () => {
     return html
 }
 
+
+
+//add a click event listener that presents an alert box showing the price of a product when it is clicked
+
+const findPrice = (clickEvent) => {
+
+    const itemClicked = clickEvent.target
+
+        if (itemClicked.id.startsWith("product")) {
+
+            const [,productId] = itemClicked.id.split("--")
+
+            for (const productObject of products) {
+
+                if (productObject.id === parseInt(productId)) {
+                    window.alert(`${productObject.name} costs ${productObject.price}`)
+                }
+            }
+        }
+    }
+
+document.addEventListener("click", findPrice)
+
