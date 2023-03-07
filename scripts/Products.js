@@ -30,8 +30,10 @@ const findPrice = (clickEvent) => {
 
             for (const productObject of products) {
 
+                const priceString = `$${productObject.price.toFixed(2)}`
+
                 if (productObject.id === parseInt(productId)) {
-                    window.alert(`${productObject.name} costs ${productObject.price}`)
+                    window.alert(`${productObject.name} costs ${priceString}`)
                 }
             }
         }
